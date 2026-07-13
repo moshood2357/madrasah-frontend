@@ -1,12 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
 
-
 // ─── Site-wide constants ───────────────────────────────────────────────────
 const SITE_NAME = "Dar Al-Arqam Global Institute";
-const SITE_URL     = "https://www.daralarqam.com";
+const SITE_URL = "https://www.daralarqam.com";
 const SITE_TAGLINE = "Authentic Islamic Education — Anywhere in the World";
-const SITE_DESC    =
+const SITE_DESC =
   "Dar Al-Arqam Global Institute is a comprehensive Islamic learning institution offering " +
   "Quran recitation, Hifz, Tajweed, Fiqh, Aqeedah, Arabic, Hadith, Seerah, " +
   "and Islamic Studies for children, teenagers, and adults worldwide. " +
@@ -15,10 +14,10 @@ const SITE_DESC    =
 const TWITTER_HANDLE = "@daralarqam"; // update when available
 
 const OG_IMAGE = {
-  url:    `${SITE_URL}/logo4.png`,   // create a 1200x630 branded image
-  width:  1200,
+  url: `${SITE_URL}/logo4.png`, // create a 1200x630 branded image
+  width: 1200,
   height: 630,
-  alt:    "Dar Al-Arqam Global Institute — Authentic Islamic Education Online",
+  alt: "Dar Al-Arqam Global Institute — Authentic Islamic Education Online",
 };
 
 // ─── Shared keywords ──────────────────────────────────────────────────────
@@ -46,7 +45,7 @@ const BASE_KEYWORDS = [
 ];
 
 // ─── Root / default metadata ──────────────────────────────────────────────
-export const rootMetadata: Metadata = {
+export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
 
   title: {
@@ -113,9 +112,9 @@ export const rootMetadata: Metadata = {
   category: "education",
 
   // Verification — add when available
-  verification: {
-    google: "google-site-verification-token-here",
-  },
+  // verification: {
+  //   google: "google-site-verification-token-here",
+  // },
 };
 
 // ─── Per-page metadata helpers ────────────────────────────────────────────
@@ -143,9 +142,9 @@ export const homeMetadata: Metadata = {
 };
 
 export const aboutMetadata: Metadata = {
-  title:       "About Us",
-      description:
-        "Learn about Dar Al-Arqam Global Institute — our mission to provide pristine, accessible " +
+  title: "About Us",
+  description:
+    "Learn about Dar Al-Arqam Global Institute — our mission to provide pristine, accessible " +
     "Islamic education rooted in the Quran and Sunnah. Meet our qualified " +
     "scholars and discover our vision for global Islamic learning.",
   keywords: [
@@ -158,15 +157,16 @@ export const aboutMetadata: Metadata = {
   ],
   alternates: { canonical: `${SITE_URL}/about` },
   openGraph: {
-    title:       "About Us | Dar Al-Arqam Global Institute",
-    description: "Our mission: pristine, accessible, and transformative Islamic education through qualified instructors and a curriculum rooted in the Quran and Sunnah.",
-    url:         `${SITE_URL}/about`,
-    images:      [OG_IMAGE],
+    title: "About Us | Dar Al-Arqam Global Institute",
+    description:
+      "Our mission: pristine, accessible, and transformative Islamic education through qualified instructors and a curriculum rooted in the Quran and Sunnah.",
+    url: `${SITE_URL}/about`,
+    images: [OG_IMAGE],
   },
 };
 
 export const coursesMetadata: Metadata = {
-  title:       "Islamic Courses & Programs",
+  title: "Islamic Courses & Programs",
   description:
     "Browse our full range of Islamic courses — Quran Recitation, Hifz, " +
     "Tajweed, Arabic Language, Fiqh, Aqeedah, Hadith, Seerah, and Islamic " +
@@ -187,15 +187,16 @@ export const coursesMetadata: Metadata = {
   ],
   alternates: { canonical: `${SITE_URL}/courses` },
   openGraph: {
-    title:       "Islamic Courses & Programs | Dar Al-Arqam Global Institute",
-    description: "Quran, Arabic, Fiqh, Aqeedah, Hadith, Seerah and more — structured Islamic courses for all ages and levels.",
-    url:         `${SITE_URL}/courses`,
-    images:      [OG_IMAGE],
+    title: "Islamic Courses & Programs | Dar Al-Arqam Global Institute",
+    description:
+      "Quran, Arabic, Fiqh, Aqeedah, Hadith, Seerah and more — structured Islamic courses for all ages and levels.",
+    url: `${SITE_URL}/courses`,
+    images: [OG_IMAGE],
   },
 };
 
 export const contactMetadata: Metadata = {
-  title:       "Contact Us",
+  title: "Contact Us",
   description:
     "Get in touch with Dar Al-Arqam Global Institute. Questions about enrolment, courses, " +
     "or your student account? We respond within 24 hours. Contact us by email, " +
@@ -209,34 +210,41 @@ export const contactMetadata: Metadata = {
   ],
   alternates: { canonical: `${SITE_URL}/contact` },
   openGraph: {
-    title:       "Contact Us | Dar Al-Arqam Global Institute",
-    description: "Reach out to Dar Al-Arqam Global Institute for course enquiries, enrolment, and support. We're here to help.",
-    url:         `${SITE_URL}/contact`,
-    images:      [OG_IMAGE],
+    title: "Contact Us | Dar Al-Arqam Global Institute",
+    description:
+      "Reach out to Dar Al-Arqam Global Institute for course enquiries, enrolment, and support. We're here to help.",
+    url: `${SITE_URL}/contact`,
+    images: [OG_IMAGE],
   },
 };
 
 export const loginMetadata: Metadata = {
-  title:       "Student Sign In",
-  description: "Sign in to your Dar Al-Arqam Global Institute student portal to access your courses, resources, classroom links, and results.",
-  robots:      { index: false, follow: false }, // don't index auth pages
-  alternates:  { canonical: `${SITE_URL}/login` },
+  title: "Student Sign In",
+  description:
+    "Sign in to your Dar Al-Arqam Global Institute student portal to access your courses, resources, classroom links, and results.",
+  robots: { index: false, follow: false },
+  alternates: { canonical: `${SITE_URL}/login` },
 };
 
 export const registerMetadata: Metadata = {
-  title:       "Create Student Account",
-  description: "Register for Dar Al-Arqam Global Institute — create your student account to access Islamic courses, resources, and your personalised learning portal.",
-  alternates:  { canonical: `${SITE_URL}/register` },
+  title: "Create Student Account",
+  description:
+    "Register for Dar Al-Arqam Global Institute — create your student account to access Islamic courses, resources, and your personalised learning portal.",
+  alternates: { canonical: `${SITE_URL}/register` },
   openGraph: {
-    title:       "Register | Dar Al-Arqam Global Institute",
-    description: "Create your free student account and start your Islamic learning journey today.",
-    url:         `${SITE_URL}/register`,
-    images:      [OG_IMAGE],
+    title: "Register | Dar Al-Arqam Global Institute",
+    description:
+      "Create your free student account and start your Islamic learning journey today.",
+    url: `${SITE_URL}/register`,
+    images: [OG_IMAGE],
   },
 };
 
-
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
     <html lang="en">
       <body suppressHydrationWarning>{children}</body>
