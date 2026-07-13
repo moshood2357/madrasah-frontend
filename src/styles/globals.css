@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@300;400;500;600&family=Noto+Naskh+Arabic:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Brand Colours (extracted from logo) */
+  --forest-900: #0f3614;
+  --forest-800: #154a1c;
+  --forest-700: #1a5c22;
+  --forest-600: #1d6926;
+  --forest-500: #2d8636;
+  --forest-200: #b3dab7;
+  --forest-50:  #f0f7f1;
+
+  --gold-600:   #a87813;
+  --gold-500:   #c9971a;
+  --gold-400:   #e4b332;
+  --gold-300:   #ecc95f;
+  --gold-100:   #faf0cc;
+  --gold-50:    #fdf9ec;
+
+  --cream:      #f5f0e8;
+  --parchment:  #ede5d0;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', serif;
+  --font-body:    'DM Sans', sans-serif;
+  --font-arabic:  'Noto Naskh Arabic', serif;
+
+  --nav-height: 72px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: var(--font-body);
+  background-color: var(--cream);
+  color: var(--forest-900);
+  line-height: 1.6;
+}
+.bismillah {
+  font-family: var(--font-arabic);
+  font-size: 1.5rem;
+  color: var(--gold-500);
+}
+.gold-divider {
+  width: 60px; height: 3px;
+  background: linear-gradient(90deg, var(--gold-400), var(--gold-600));
+  border-radius: 2px;
+}
+.pattern-overlay {
+  background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none'%3E%3Cg fill='%23c9971a' fill-opacity='0.06'%3E%3Cpath d='M30 0l8.66 15H21.34L30 0zm0 60l-8.66-15h17.32L30 60zM0 30l15-8.66V38.66L0 30zm60 0l-15 8.66V21.34L60 30z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
